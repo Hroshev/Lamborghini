@@ -1,0 +1,48 @@
+//Color Variables
+$accent: #040404;
+$text-color: #fff;
+$nav-color: #363636;
+$nav-color-mob: #fff;
+$gold: #9F6B08;
+$btn-color: #fff;
+$btn-bg: #5C62EC;
+$bg: #fff;
+
+//Burger color variables
+$burger-fixed:#36363680;
+$burger-bg: #363636;
+
+/* Basic Styles */
+body {
+  font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $accent;
+  background-color: $bg;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1230px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  max-width: 200px;
+  height: 50px;
+  text-align: center;
+  color: $btn-color;
+  background-color: $btn-bg;
+  transition: opacity 0.2s ease-in;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}

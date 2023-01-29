@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/head.html',{
+	"title":"LAMBORGHINI SUPER TROFEO"
+	})
+	<body class="popup__wrapper">
+		<header class="header burger">
+			<div class="burger__container">
+				<a class="burger__logo" href="./index.html">
+					<img class="burger__logo-img" src="@img/icons/logo.svg" alt="Logo">
+				</a>
+				<div class="burger__menu menu">
+					<div class="menu__icon">
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list menu__left">
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">О гонке</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Трек</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Lamborghini Super trofeo</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Новости</a></li>
+						</ul>
+						<a class="logo" href="./index.html">
+							<img class="logo__img" src="@img/icons/logo.svg" alt="Logo">
+						</a>
+						<ul class="menu__list menu__right">
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Купить билеты</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Смотреть онлайн</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto="" href="#">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>		
+		</header>
+
+		<main>
+			<section class="promo">
+				<div class="promo__container">
+					<div class="promo__inner">
+						<h1 class="promo__title">LAMBORGHINI SUPER TROFEO</h1>
+						<h2 class="promo__subtitle">Гранд-финал 2022<span>3-6 ноября</span></h2>
+						<p class="promo__text">автодром Портимао,Португалия</p>
+						<a class="promo__arrow" href="#">
+							<img src="@img/icons/scrollTo.svg" alt="Arrow bottom">
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		<script defer src="js/app.min.js"></script>
+	</body>
+</html>
