@@ -1,4 +1,5 @@
 import * as burger from "./modules/burger.js"
+import * as swiper from "./modules/swiper.js"
 
 // import * as popup from "./modules/popup.js"
 // import * as regularExpressions from "./modules/regularExpressions.js"
