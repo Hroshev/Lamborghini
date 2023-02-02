@@ -15,7 +15,7 @@
     padding-top: 25px;
     right: 0;
     left: 0;
-    background: linear-gradient(180deg, #D8D4CA 0%, rgba(217, 217, 217, 0) 100%);
+    background: linear-gradient(180deg, #d8d4ca 0%, rgba(217, 217, 217, 0) 100%);
     z-index: 20;
     @include tablet {
         position: fixed;
@@ -181,7 +181,7 @@
 
 /* Promo */
 .promo {
-    background: url("@img/promo-bg.jpg") 50% 50%/cover no-repeat;
+    background: url("@img/promo-bg.jpg") 50% 50% / cover no-repeat;
     &__inner {
         padding-top: 110px;
         min-height: 100vh;
@@ -193,14 +193,14 @@
     }
     &__title {
         font-size: 76px;
-        font-family: 'Impact', sans-serif;
+        font-family: "Impact", sans-serif;
         font-weight: 400;
         letter-spacing: 0.03em;
         text-transform: uppercase;
     }
     &__subtitle {
         font-size: 48px;
-        font-family: 'Impact', sans-serif;
+        font-family: "Impact", sans-serif;
         font-weight: 400;
         text-align: center;
         align-self: center;
@@ -285,7 +285,7 @@
 
 /* Track */
 .track {
-    background: url("@img/track-bg.jpg") 50% 50%/cover no-repeat;
+    background: url("@img/track-bg.jpg") 50% 50% / cover no-repeat;
     &__inner {
         display: flex;
         flex-direction: column;
@@ -313,7 +313,8 @@
         color: $text-color;
         background-color: #363636;
     }
-    &__white {}
+    &__white {
+    }
     &__black-inner {
         position: relative;
         &::before {
@@ -323,7 +324,7 @@
             left: -130px;
             width: 185px;
             height: 213px;
-            background: url("@img/evo-dec-01.svg") 50% 50%/cover no-repeat;
+            background: url("@img/evo-dec-01.svg") 50% 50% / cover no-repeat;
         }
         &::after {
             position: absolute;
@@ -332,7 +333,7 @@
             left: -40px;
             width: 498px;
             height: 572px;
-            background: url("@img/evo-dec-02.svg") 50% 50%/cover no-repeat;
+            background: url("@img/evo-dec-02.svg") 50% 50% / cover no-repeat;
         }
     }
     &__white-inner {
@@ -349,7 +350,7 @@
             left: 350px;
             width: 274px;
             height: 257px;
-            background: url("@img/evo-dec-03.png") 50% 50%/cover no-repeat;
+            background: url("@img/evo-dec-03.png") 50% 50% / cover no-repeat;
         }
         &::after {
             position: absolute;
@@ -358,7 +359,7 @@
             left: 600px;
             width: 324px;
             height: 311px;
-            background: url("@img/evo-dec-04.png") 50% 50%/cover no-repeat;
+            background: url("@img/evo-dec-04.png") 50% 50% / cover no-repeat;
         }
     }
     &__black-info {
@@ -411,7 +412,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: url("@img/evo-video.png") 50% 50%/cover no-repeat;
+        background: url("@img/evo-video.png") 50% 50% / cover no-repeat;
     }
     &__white-video-link {
         text-align: center;
@@ -458,7 +459,17 @@
         top: 0;
         left: 50%;
         cursor: pointer;
-
+    }
+    &__quote {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 50px;
+    }
+    &__quote-box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
     }
 }
 
@@ -469,7 +480,84 @@
     transform: translateX(8px);
 }
 
+.blockquote {
+    &__name {
+        margin-bottom: 10px;
+        font-weight: 700;
+        span {
+            margin-bottom: 3px;
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            color: $gold;
+        }
+    }
+    &__text {
+        font-style: italic;
+    }
+}
 
 /* Footer */
 .footer {
+    padding: 100px 0 80px 0;
+    color: $text-color;
+    background-color: #363636;
+    &__title {
+        margin-bottom: 50px;
+        font-size: 32px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+    }
+    &__info-item {
+        margin-bottom: 40px;
+        dt {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        dd {
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 16px;
+            color: $text-color;
+        }
+    }
+    &__social-list {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    &__address {
+        flex-basis: 462px;
+    }
+    &__address-title {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__address-text {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    &__map {
+        height: 250px;
+    }
+    &__bottom {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        a {
+            color: $text-color;
+        }
+    }
 }
