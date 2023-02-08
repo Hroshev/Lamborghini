@@ -197,6 +197,9 @@
         font-weight: 400;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        @include tablet-min {
+            font-size: 40px;
+        }
     }
     &__subtitle {
         font-size: 48px;
@@ -205,6 +208,9 @@
         text-align: center;
         align-self: center;
         border-bottom: 1px solid $accent;
+        @include tablet-min {
+            font-size: 28px;
+        }
         span {
             display: block;
             padding: 10px 0;
@@ -227,10 +233,18 @@
 /* Info */
 .info {
     padding-bottom: 100px;
+    @include tablet-min {
+        padding-bottom: 60px;
+    }
     &__part {
         padding-top: 100px;
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+        @include tablet-min {
+            padding-top: 60px;
+            flex-direction: column;
+        }
     }
     &__part:first-child {
         display: block;
@@ -248,30 +262,59 @@
         display: flex;
         justify-content: space-between;
         column-gap: 20px;
+        @include phone {
+            flex-direction: column;
+        }
     }
     &__text {
         margin-bottom: 30px;
         flex-basis: 440px;
+        @include phone {
+            flex-basis: auto;
+        }
     }
     &__part:nth-child(2) .info__text {
         max-width: 352px;
+        @include tablet-min {
+            max-width: none;
+        }
     }
     &__part:nth-child(3) .info__text {
         max-width: 377px;
+        @include tablet-min {
+            max-width: none;
+        }
     }
     &__part-img {
         object-fit: cover;
     }
     &__content {
         flex-basis: 415px;
+        @include tablet-min {
+            flex-basis: auto;
+        }
     }
     &__table {
         position: relative;
         flex-basis: 450px;
         top: 20px;
         border-bottom: 1px solid $accent;
+        @include tablet-min {
+            flex-basis: auto;
+            width: 100%;
+        }
         td {
             padding-bottom: 20px;
+            @include phone {
+                width: 50px;
+            }
+
+        }
+        td:nth-child(2) {
+            @include tablet-min {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
         }
         &::before {
             content: "";
@@ -290,6 +333,9 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        @include tablet-min {
+            min-height: auto;
+        }
     }
     &__title {
         padding: 50px 0 30px 0;
@@ -301,6 +347,9 @@
     }
     &__img {
         margin: auto auto 90px auto;
+        @include tablet-min {
+            margin: 30px auto 60px auto;
+        }
     }
 }
 
@@ -308,12 +357,16 @@
 .evo {
     margin-bottom: 100px;
     font-size: 14px;
+    @include tablet-min {
+        margin-bottom: 60px;
+    }
     &__black {
         padding: 100px 0 50px 0;
         color: $text-color;
         background-color: #363636;
-    }
-    &__white {
+        @include tablet-min {
+            padding: 60px 0 50px 0;
+        }
     }
     &__black-inner {
         position: relative;
@@ -325,6 +378,9 @@
             width: 185px;
             height: 213px;
             background: url("@img/evo-dec-01.svg") 50% 50% / cover no-repeat;
+            @include tablet-min {
+                display: none;
+            }
         }
         &::after {
             position: absolute;
@@ -334,6 +390,9 @@
             width: 498px;
             height: 572px;
             background: url("@img/evo-dec-02.svg") 50% 50% / cover no-repeat;
+            @include tablet-min {
+                display: none;
+            }
         }
     }
     &__white-inner {
@@ -343,6 +402,9 @@
         justify-content: space-between;
         flex-direction: column;
         row-gap: 30px;
+        @include tablet-min {
+            padding-top: 60px;
+        }
         &::before {
             position: absolute;
             content: "";
@@ -351,6 +413,9 @@
             width: 274px;
             height: 257px;
             background: url("@img/evo-dec-03.png") 50% 50% / cover no-repeat;
+            @include tablet-min {
+                display: none;
+            }
         }
         &::after {
             position: absolute;
@@ -360,12 +425,19 @@
             width: 324px;
             height: 311px;
             background: url("@img/evo-dec-04.png") 50% 50% / cover no-repeat;
+            @include tablet {
+                display: none;
+            }
         }
     }
     &__black-info {
         display: flex;
         justify-content: space-between;
         column-gap: 50px;
+        @include tablet-min {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     &__black-title {
         font-size: 32px;
@@ -378,6 +450,9 @@
         flex-direction: column;
         row-gap: 30px;
         flex-basis: 437px;
+        @include tablet-min {
+            flex-basis: auto;
+        }
     }
     &__black-text {
         font-size: 14px;
@@ -396,13 +471,29 @@
         margin: 200px auto 60px auto;
         z-index: 1;
         display: block;
+        @include tablet-min {
+            margin: 80px auto 40px auto;
+        }
     }
     &__descr-list {
         display: flex;
         justify-content: center;
         column-gap: 65px;
+        @include tablet-min {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
         dd {
             text-transform: uppercase;
+            @include tablet-min {
+                text-align: center;
+            }
+        }
+        dt {
+            @include tablet-min {
+                text-align: center;
+            }
         }
     }
     &__white-video {
@@ -413,6 +504,9 @@
         align-items: center;
         flex-direction: column;
         background: url("@img/evo-video.png") 50% 50% / cover no-repeat;
+        @include tablet-min {
+            margin-top: 60px;
+        }
     }
     &__white-video-link {
         text-align: center;
@@ -426,6 +520,9 @@
 /* Blog */
 .blog {
     margin-bottom: 100px;
+    @include tablet-min {
+        margin-bottom: 60px;
+    }
     &__title {
         margin-bottom: 30px;
         font-size: 32px;
@@ -436,8 +533,13 @@
         position: relative;
         padding-top: 50px;
         margin-bottom: 100px;
+        @include tablet-min {
+            padding-top: 40px;
+            margin-bottom: 60px;
+        }
     }
     &__item-img {
+        width: 100%;
         margin-bottom: 20px;
     }
     &__item-title {
@@ -471,6 +573,11 @@
         flex-direction: column;
         row-gap: 30px;
     }
+    &__quote-img {
+        @include tablet-min {
+            display: none;
+        }
+    }
 }
 
 .swiper-button-left {
@@ -500,6 +607,9 @@
 /* Footer */
 .footer {
     padding: 100px 0 80px 0;
+    @include tablet-min {
+        padding: 60px 0 40px 0;
+    }
     color: $text-color;
     background-color: #363636;
     &__title {
@@ -507,11 +617,18 @@
         font-size: 32px;
         font-weight: 300;
         text-transform: uppercase;
+        @include tablet-min {
+            margin-bottom: 30px;
+        }
     }
     &__top {
         display: flex;
         justify-content: space-between;
         column-gap: 20px;
+        @include phone {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     &__info-item {
         margin-bottom: 40px;
@@ -536,6 +653,9 @@
     }
     &__address {
         flex-basis: 462px;
+        @include phone {
+            flex-basis: auto;
+        }
     }
     &__address-title {
         margin-bottom: 20px;
@@ -558,6 +678,11 @@
         gap: 20px;
         a {
             color: $text-color;
+        }
+    }
+    &__logo {
+        @include phone {
+            display: none;
         }
     }
 }
